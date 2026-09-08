@@ -1,0 +1,25 @@
+# Environment & secrets
+.env
+.env.local
+.env.*
+
+# Deployment guide (contains production URLs and UUIDs)
+.deploy.md
+
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+out/
+.vite/
+.next/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp
