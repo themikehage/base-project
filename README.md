@@ -20,8 +20,10 @@ Plantilla base y protocolo sistemático para regir el comportamiento de agentes 
 │   │   ├── frontend.rules.md          # 1 hook por página, service modules, no direct fetch
 │   │   └── design.rules.md            # Document canvas, tipografía dual, touch-first
 │   └── skills/
-│       └── coolify/
-│           └── SKILL.md               # Skill de despliegue y health check
+│       ├── coolify/
+│       │   └── SKILL.md               # Skill de despliegue y health check
+│       └── project-setup/
+│           └── SKILL.md               # Guía para poblar protocol files en greenfield/brownfield
 └── plans/
     └── Verificable-Plan-Example.md    # Plantilla canónica para hitos y planes verificables
 ```

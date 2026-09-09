@@ -9,7 +9,7 @@ Run when starting work on a project for the first time or after a long pause.
 
 ## Protocol
 
-1. Check if `.agents/` scaffold exists. If not, copy from `BASE_PROJECT`.
+1. Check if `.agents/` scaffold exists. If not, copy from `BASE_PROJECT`. If bootstrapping or calibrating protocol files (`about.md`, `steps.md`, `.deploy.md`), follow [.agents/skills/project-setup/SKILL.md](../skills/project-setup/SKILL.md).
 2. Read `about.md` — understand current architecture.
 3. Read `steps.md` — understand pending work and what's done.
 4. Read `.deploy.md` — understand production environment and deploy flow.
