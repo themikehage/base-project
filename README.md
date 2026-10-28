@@ -25,12 +25,14 @@ Plantilla base y protocolo sistemático para regir el comportamiento de agentes 
 │       │   └── SKILL.md               # Skill de despliegue y health check
 │       └── project-setup/
 │           └── SKILL.md               # Guía para poblar protocol files en greenfield/brownfield
+├── .agents/templates/
+│   └── plan.md                        # Plantilla canónica de plan (Status: draft | approved | done)
 └── plans/
-    └── Verificable-Plan-Example.md    # Plantilla canónica para hitos y planes verificables
+    └── completed/                     # Planes archivados (H<N>-<slug>.md)
 ```
 
 ## Flujo de Trabajo para el Agente
 
 1. **`/START`**: Al iniciar, lee `about.md`, `steps.md` y `.deploy.md` para entender el contexto sin tocar código.
-2. **`/TRIAGE`**: Ante cualquier feature o bug, detiene la ejecución, investiga y genera un plan verificable con criterios de aceptación en `plans/`. Espera la aprobación del usuario.
-3. **`/EXECUTE`**: Una vez aprobado el plan, ejecuta el hito, corre typecheck y lint, y genera un commit convencional sin atribución de IA.
+2. **`/TRIAGE`**: Ante cualquier feature o bug, detiene la ejecución, investiga y genera un plan verificable (`plans/H<N>-<slug>.md`, `Status: draft`) con criterios de aceptación. Espera la aprobación del usuario.
+3. **`/EXECUTE`**: Una vez aprobado el plan (`Status: approved`), ejecuta el hito, corre typecheck y lint, archiva el plan en `plans/completed/` y genera un commit convencional sin atribución de IA.

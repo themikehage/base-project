@@ -1,6 +1,6 @@
 # H5 — Limpieza de skills, idioma y rules
 
-**Status**: draft
+**Status**: approved
 **Objective**: Quitar referencias rotas y suposiciones de stack.
 
 **Active rules**: ninguna.

@@ -1,6 +1,6 @@
 # H4 — Contexto ligero por sesión
 
-**Status**: draft
+**Status**: approved
 **Objective**: Reducir lo que el agente lee en cada sesión y dar casa a las ideas sueltas.
 
 **Active rules**: ninguna.

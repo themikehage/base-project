@@ -1,5 +1,6 @@
-# Hito N — {{MILESTONE_TITLE}}
+# H{{N}} — {{MILESTONE_TITLE}}
 
+**Status**: draft  <!-- draft | approved | done -->
 **Objective**: {{ONE_LINE_OBJECTIVE}}.
 
 **Active rules**: `frontend.rules.md` · `backend.rules.md`.

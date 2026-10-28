@@ -18,7 +18,7 @@ After any correction, refactor, config change, or new feature:
 
 ## 2. Plans & Steps
 
-- Active and pending work lives in [plans/](./plans/).
+- Active and pending work lives in [plans/](./plans/) as `H<N>-<slug>.md`, created from [.agents/templates/plan.md](./.agents/templates/plan.md). Each plan carries `Status: draft | approved | done`; `/EXECUTE` only runs `approved` plans.
 - Completed milestones are archived in [plans/completed/](./plans/completed/).
 - Overall progress is tracked in [steps.md](./steps.md).
 

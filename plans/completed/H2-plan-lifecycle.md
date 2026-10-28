@@ -1,6 +1,6 @@
 # H2 — Ciclo de vida del plan y cierre de hito
 
-**Status**: draft
+**Status**: done
 **Objective**: Estado explícito en los planes, nombres únicos, archivado definido y commit limpio en un solo paso.
 
 **Active rules**: ninguna.
@@ -17,11 +17,11 @@
 
 ## Target State (To-Be) — Acceptance Criteria
 
-- [ ] **H2-A1** — Plantilla movida a `.agents/templates/plan.md` con cabecera `Status: draft | approved | done`.
-- [ ] **H2-A2** — TRIAGE crea `plans/H<N>-<slug>.md` con `Status: draft`; EXECUTE exige `approved` y lo pasa a `done`.
-- [ ] **H2-A3** — EXECUTE: marcar criterios `[x]`, mover plan a `plans/completed/`, actualizar `steps.md`/`about.md` **antes** del commit; `git add` solo de rutas explícitas.
-- [ ] **H2-A4** — `plans/completed/.gitkeep` existe; `plans/Verificable-Plan-Example.md` eliminado; referencias actualizadas (`grep -r Verificable-Plan-Example` vacío).
-- [ ] **H2-A5** — Naming `H<N>-<slug>` unificado en TRIAGE, project-setup y README.
+- [x] **H2-A1** — Plantilla movida a `.agents/templates/plan.md` con cabecera `Status: draft | approved | done`.
+- [x] **H2-A2** — TRIAGE crea `plans/H<N>-<slug>.md` con `Status: draft`; EXECUTE exige `approved` y lo pasa a `done`.
+- [x] **H2-A3** — EXECUTE: marcar criterios `[x]`, mover plan a `plans/completed/`, actualizar `steps.md`/`about.md` **antes** del commit; `git add` solo de rutas explícitas.
+- [x] **H2-A4** — `plans/completed/.gitkeep` existe; `plans/Verificable-Plan-Example.md` eliminado; referencias actualizadas (`grep -r Verificable-Plan-Example` vacío).
+- [x] **H2-A5** — Naming `H<N>-<slug>` unificado en TRIAGE, project-setup y README.
 
 ## Artifacts
 

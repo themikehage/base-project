@@ -1,6 +1,6 @@
 # H3 — Vía rápida y gate de validación único
 
-**Status**: draft
+**Status**: approved
 **Objective**: Eliminar la contradicción sobre cuándo hace falta plan y convertir el gate en un único comando por proyecto.
 
 **Active rules**: ninguna.

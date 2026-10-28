@@ -120,7 +120,7 @@ Define the initial sequential milestones:
 2. **Reconcile Completed Work**: Add completed features to `## Completed` with `[x]` and descriptions.
 3. **Inspect Working Tree**: Add any uncommitted or partially implemented features to `## In Progress`.
 4. **Populate Backlog**: Add pending features or planned milestones to `## Backlog`.
-5. **Link Plans**: If milestones have dedicated files in `plans/` (e.g. `plans/H10-docx-ingestion.md`), link them directly in markdown.
+5. **Link Plans**: If milestones have dedicated files in `plans/` (e.g. `plans/H10-docx-ingestion.md`, archived ones in `plans/completed/`), link them directly in markdown.
 
 ---
 
