@@ -8,6 +8,8 @@ Keep it lean: every entry is **one line + a link to its plan** (archived in `pla
 
 ## Backlog
 
+- [ ] {{MILESTONE_1}}
+- [ ] {{MILESTONE_2}}
 
 ---
 
@@ -19,8 +21,4 @@ Keep it lean: every entry is **one line + a link to its plan** (archived in `pla
 
 ## Completed
 
-- [x] [H1 — Higiene de secretos de deploy](./plans/completed/H1-deploy-secrets-hygiene.md)
-- [x] [H2 — Ciclo de vida del plan](./plans/completed/H2-plan-lifecycle.md)
-- [x] [H3 — Vía rápida y gate único](./plans/completed/H3-fast-path-and-gate.md)
-- [x] [H4 — Contexto ligero](./plans/completed/H4-lean-context.md)
-- [x] [H5 — Limpieza](./plans/completed/H5-cleanup.md)
+*(one line + link to `plans/completed/H<N>-<slug>.md` when acceptance criteria pass)*
