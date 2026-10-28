@@ -8,7 +8,8 @@ Plantilla base y protocolo sistemático para regir el comportamiento de agentes 
 ├── AGENTS.md                          # Protocolo obligatorio del agente y disparadores
 ├── about.md                           # Arquitectura, stack y decisiones (lectura previa obligatoria)
 ├── steps.md                           # Backlog vivo y registro de progreso
-├── .deploy.md                         # Guía y parámetros de despliegue en producción
+├── .deploy.example.md                 # Plantilla versionada de la guía de despliegue
+├── .deploy.md                         # Copia local con valores reales (git-ignored)
 ├── .gitignore                         # Patrones base
 ├── .agents/
 │   ├── routines/

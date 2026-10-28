@@ -27,7 +27,7 @@ After any correction, refactor, config change, or new feature:
 ## 3. Deploy
 
 > Deployment guide and environment configuration: [.deploy.md](./.deploy.md)  
-> *(git-ignored — contains production URLs, UUIDs)*
+> *(git-ignored — contains production URLs, UUIDs. Created from the tracked template [.deploy.example.md](./.deploy.example.md).)*
 
 ---
 

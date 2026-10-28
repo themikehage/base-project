@@ -35,7 +35,7 @@ Before touching any file, determine the repository state:
 2. **Relative Paths**: Confirm that all referenced files exist:
    - `./about.md`
    - `./steps.md`
-   - `./.deploy.md`
+   - `./.deploy.md` (local, git-ignored; created from `./.deploy.example.md`)
    - `./.agents/routines/START.md`, `TRIAGE.md`, `EXECUTE.md`
    - `./.agents/rules/backend.rules.md`, `frontend.rules.md`, `design.rules.md`
 3. **Domain Constraints**: In section `## 6. Non-Negotiable Constraints`, append critical project-wide rules (e.g. "Zero `any` in core layer", "All financial values in integer cents", "Files ≤ 300 lines").
@@ -126,7 +126,9 @@ Define the initial sequential milestones:
 
 ### D. `.deploy.md` — Production Infrastructure & Deploy Protocol
 
-> **SECURITY MANDATE:** `.deploy.md` must be added to `.gitignore`. It contains internal URLs, infrastructure UUIDs, and production credentials.
+> **SECURITY MANDATE:** `.deploy.md` must be in `.gitignore` and never tracked. It contains internal URLs, infrastructure UUIDs, and production credentials.
+>
+> The repo only tracks `.deploy.example.md`. Create the real file with `cp .deploy.example.md .deploy.md`, fill it in, then verify `git ls-files .deploy.md` returns nothing. In a brownfield repo, if `.deploy.md` is already tracked, run `git rm --cached .deploy.md` and review its history for leaked secrets.
 
 #### 1. Production Parameters Table
 ```markdown
