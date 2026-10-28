@@ -10,7 +10,7 @@ Run when the user brings a feature request, improvement, or bug report.
 ## Protocol
 
 1. **Stop. Do not execute.**
-2. Read `about.md` and the files involved in the request.
+2. Read `about.md`, `inbox.md` and the files involved in the request. Promote relevant inbox entries into the plan and remove them from the inbox.
 3. Determine the lane (see Work Lanes in `AGENTS.md`). If it is **Trivial**, tell the user and go straight to the fix, `verify` and commit — no plan.
 
 **Small** (2–3 files, isolated change):

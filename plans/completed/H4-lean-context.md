@@ -1,6 +1,6 @@
 # H4 — Contexto ligero por sesión
 
-**Status**: approved
+**Status**: done
 **Objective**: Reducir lo que el agente lee en cada sesión y dar casa a las ideas sueltas.
 
 **Active rules**: ninguna.
@@ -16,10 +16,10 @@
 
 ## Target State (To-Be) — Acceptance Criteria
 
-- [ ] **H4-A1** — `steps.md`: Completed = una línea + enlace al plan archivado (formato documentado en la propia cabecera).
-- [ ] **H4-A2** — Nuevo `inbox.md` en el template; TRIAGE indica revisarlo y promover entradas a planes.
-- [ ] **H4-A3** — START lee `about.md` y `steps.md`; `.deploy.md` solo al desplegar. Referencia a `BASE_PROJECT` eliminada o definida.
-- [ ] **H4-A4** — Regla de `about.md`: actualizar solo si cambian arquitectura, restricciones, variables de entorno o comandos.
+- [x] **H4-A1** — `steps.md`: Completed = una línea + enlace al plan archivado (formato documentado en la propia cabecera).
+- [x] **H4-A2** — Nuevo `inbox.md` en el template; TRIAGE indica revisarlo y promover entradas a planes.
+- [x] **H4-A3** — START lee `about.md` y `steps.md`; `.deploy.md` solo al desplegar. Referencia a `BASE_PROJECT` eliminada o definida.
+- [x] **H4-A4** — Regla de `about.md`: actualizar solo si cambian arquitectura, restricciones, variables de entorno o comandos.
 
 ## Artifacts
 

@@ -10,9 +10,9 @@ Before any investigation, code change, feature, or bug fix:
 
 > **You MUST read [about.md](./about.md) to understand the project architecture, tech stack, domain, and key constraints.**
 
-After any correction, refactor, config change, or new feature:
+When a change alters architecture, key constraints, environment variables, or project commands:
 
-> **You MUST update [about.md](./about.md) to document what changed.**
+> **You MUST update [about.md](./about.md) in the same commit.** Other changes do not require it.
 
 ---
 
@@ -20,13 +20,14 @@ After any correction, refactor, config change, or new feature:
 
 - Active and pending work lives in [plans/](./plans/) as `H<N>-<slug>.md`, created from [.agents/templates/plan.md](./.agents/templates/plan.md). Each plan carries `Status: draft | approved | done`; `/EXECUTE` only runs `approved` plans.
 - Completed milestones are archived in [plans/completed/](./plans/completed/).
-- Overall progress is tracked in [steps.md](./steps.md).
+- Overall progress is tracked in [steps.md](./steps.md) (one line per milestone, linking its plan).
+- Unplanned ideas and requests go to [inbox.md](./inbox.md); `/TRIAGE` promotes them to plans.
 
 ---
 
 ## 3. Deploy
 
-> Deployment guide and environment configuration: [.deploy.md](./.deploy.md)  
+> Deployment guide and environment configuration (read only when deploying): [.deploy.md](./.deploy.md)  
 > *(git-ignored — contains production URLs, UUIDs. Created from the tracked template [.deploy.example.md](./.deploy.example.md).)*
 
 ---

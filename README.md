@@ -7,7 +7,8 @@ Plantilla base y protocolo sistemático para regir el comportamiento de agentes 
 ```
 ├── AGENTS.md                          # Protocolo obligatorio del agente y disparadores
 ├── about.md                           # Arquitectura, stack y decisiones (lectura previa obligatoria)
-├── steps.md                           # Backlog vivo y registro de progreso
+├── steps.md                           # Backlog vivo y registro de progreso (una línea por hito)
+├── inbox.md                           # Ideas y peticiones aún sin planificar
 ├── .deploy.example.md                 # Plantilla versionada de la guía de despliegue
 ├── .deploy.md                         # Copia local con valores reales (git-ignored)
 ├── .gitignore                         # Patrones base
@@ -33,6 +34,6 @@ Plantilla base y protocolo sistemático para regir el comportamiento de agentes 
 
 ## Flujo de Trabajo para el Agente
 
-1. **`/START`**: Al iniciar, lee `about.md`, `steps.md` y `.deploy.md` para entender el contexto sin tocar código.
+1. **`/START`**: Al iniciar, lee `about.md`, `steps.md` e `inbox.md` para entender el contexto sin tocar código (`.deploy.md` solo al desplegar).
 2. **`/TRIAGE`**: Ante cualquier feature o bug, detiene la ejecución, investiga y genera un plan verificable (`plans/H<N>-<slug>.md`, `Status: draft`) con criterios de aceptación. Espera la aprobación del usuario.
 3. **`/EXECUTE`**: Una vez aprobado el plan (`Status: approved`), ejecuta el hito, corre typecheck y lint, archiva el plan en `plans/completed/` y genera un commit convencional sin atribución de IA.
