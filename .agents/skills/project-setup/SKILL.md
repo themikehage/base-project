@@ -96,6 +96,10 @@ Inspect `.env.example`, `env.ts`, or schema definitions. Document each key:
 *(Never include real secret values in `about.md`.)*
 
 #### 6. Runnable Project Commands
+Make sure `package.json` defines a single `verify` script chaining typecheck, lint, `check:size`, tests and build, and document it under `Quality gate`. If missing, create it. A minimal `check:size`:
+```bash
+! git ls-files '*.ts' '*.tsx' | xargs wc -l | awk '$1>300 && $2!="total"' | grep .
+```
 Extract real npm/pnpm/bun scripts from `package.json`:
 - Dev commands: separate backend dev vs frontend dev vs concurrent hot-reload (`pnpm dev`).
 - Quality gates: `typecheck` (`tsc --noEmit`), `lint`, `test`.

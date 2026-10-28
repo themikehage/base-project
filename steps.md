@@ -6,7 +6,6 @@ Progress tracker. Agents update this after each milestone completes.
 
 ## Backlog
 
-- [ ] [H3 — Vía rápida y gate único](./plans/H3-fast-path-and-gate.md)
 - [ ] [H4 — Contexto ligero](./plans/H4-lean-context.md)
 - [ ] [H5 — Limpieza](./plans/H5-cleanup.md)
 
@@ -22,3 +21,4 @@ Progress tracker. Agents update this after each milestone completes.
 
 - [x] [H1 — Higiene de secretos de deploy](./plans/completed/H1-deploy-secrets-hygiene.md)
 - [x] [H2 — Ciclo de vida del plan](./plans/completed/H2-plan-lifecycle.md)
+- [x] [H3 — Vía rápida y gate único](./plans/completed/H3-fast-path-and-gate.md)

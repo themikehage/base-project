@@ -48,11 +48,12 @@
 
 ## Project Commands
 
+### Quality gate (mandatory)
+- `<pm> run verify` — the single gate every change must pass: typecheck + lint + `check:size` (no file > 300 lines) + tests + build. Define it in `package.json` and keep this line accurate.
+
 ### Server
-- `npm run dev` — Local dev server
-- `npx tsc --noEmit` — TypeScript strict check
+- `<pm> run dev` — Local dev server
 
 ### Client
-- `npm run dev` — Vite dev server (:5173)
-- `npm run build` — Production bundle
-- `npm run typecheck` — Frontend type check
+- `<pm> run dev` — Vite dev server (:5173)
+- `<pm> run build` — Production bundle

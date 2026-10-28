@@ -1,6 +1,6 @@
 # H3 — Vía rápida y gate de validación único
 
-**Status**: approved
+**Status**: done
 **Objective**: Eliminar la contradicción sobre cuándo hace falta plan y convertir el gate en un único comando por proyecto.
 
 **Active rules**: ninguna.
@@ -14,10 +14,10 @@
 
 ## Target State (To-Be) — Acceptance Criteria
 
-- [ ] **H3-A1** — AGENTS define tres vías: **Trivial** (1 archivo, sin cambio de comportamiento: typo, copy, config menor → sin plan, con verify + commit), **Small** (plan corto) y **Large** (hitos).
-- [ ] **H3-A2** — §4, §6 y TRIAGE usan los mismos umbrales (`grep` no encuentra "2+ files" contradictorio).
-- [ ] **H3-A3** — `about.md` define el comando `verify` obligatorio (typecheck + lint + check:size + test + build); EXECUTE y AGENTS §4.4 lo referencian como único gate.
-- [ ] **H3-A4** — project-setup indica crear `verify` y `check:size` (script que falla si un archivo >300 líneas) al adoptar un proyecto.
+- [x] **H3-A1** — AGENTS define tres vías: **Trivial** (1 archivo, sin cambio de comportamiento: typo, copy, config menor → sin plan, con verify + commit), **Small** (plan corto) y **Large** (hitos).
+- [x] **H3-A2** — §4, §6 y TRIAGE usan los mismos umbrales (`grep` no encuentra "2+ files" contradictorio).
+- [x] **H3-A3** — `about.md` define el comando `verify` obligatorio (typecheck + lint + check:size + test + build); EXECUTE y AGENTS §4.4 lo referencian como único gate.
+- [x] **H3-A4** — project-setup indica crear `verify` y `check:size` (script que falla si un archivo >300 líneas) al adoptar un proyecto.
 
 ## Artifacts
 

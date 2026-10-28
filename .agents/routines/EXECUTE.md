@@ -11,10 +11,9 @@ Run when a plan has been reviewed and approved by the user.
 
 1. Read the target plan file completely. If its `Status` is not `approved`, **stop** and ask the user.
 2. Implement each artifact following the acceptance criteria. One milestone only.
-3. Validate with the project gate:
+3. Validate with the single project gate defined in `about.md` (`Quality gate`):
    ```bash
-   npx tsc --noEmit    # or equivalent typecheck
-   npm run lint        # if configured
+   <pm> run verify     # typecheck + lint + check:size + tests + build
    ```
 4. Fix any errors before closing the milestone.
 5. Close the milestone **before** committing, so the commit is complete:
