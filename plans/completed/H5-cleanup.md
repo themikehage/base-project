@@ -1,6 +1,6 @@
 # H5 — Limpieza de skills, idioma y rules
 
-**Status**: approved
+**Status**: done
 **Objective**: Quitar referencias rotas y suposiciones de stack.
 
 **Active rules**: ninguna.
@@ -16,11 +16,11 @@
 
 ## Target State (To-Be) — Acceptance Criteria
 
-- [ ] **H5-A1** — Skill coolify: incluir el script (copiado de resume-pro/just-post) o eliminar la skill del template; sin referencias rotas.
-- [ ] **H5-A2** — AGENTS.md añade sección corta "Skills" listando las disponibles.
-- [ ] **H5-A3** — Idioma unificado (propuesta: protocolo en inglés, README/comentarios al usuario en español) documentado en AGENTS.
-- [ ] **H5-A4** — project-setup indica eliminar/adaptar rules que no apliquen al stack (p. ej. Flutter); comandos de `about.md` neutros (`<pm> run verify`).
-- [ ] **H5-A5** — README refleja estructura real (`git ls-files` coincide con el árbol).
+- [x] **H5-A1** — Skill coolify: script genérico mínimo incluido en `scripts/coolify-cli.ts`; sin referencias rotas.
+- [x] **H5-A2** — AGENTS.md añade sección corta "Skills" listando las disponibles.
+- [x] **H5-A3** — Idioma unificado (protocolo y rules en inglés, README y conversación en español) documentado en AGENTS.
+- [x] **H5-A4** — project-setup indica eliminar/adaptar rules que no apliquen al stack (p. ej. Flutter); comandos de `about.md` neutros (`<pm> run verify`).
+- [x] **H5-A5** — README refleja estructura real (`git ls-files` coincide con el árbol).
 
 ## Artifacts
 

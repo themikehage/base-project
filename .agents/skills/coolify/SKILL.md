@@ -20,11 +20,10 @@ bun run .agents/skills/coolify/scripts/coolify-cli.ts logs <UUID>
 
 ## Setup
 
-1. Set `COOLIFY_TOKEN` in your environment (get it from Coolify → API Tokens).
-2. Set `COOLIFY_BASE_URL` to your Coolify instance URL (e.g. `https://coolify.your-domain.com`).
+1. Set `COOLIFY_TOKEN` in your environment or `.env` (get it from Coolify → API Tokens).
+2. Set `COOLIFY_BASE_URL` to your Coolify instance URL, without `/api/v1` (e.g. `https://coolify.your-domain.com`).
 3. See `.deploy.md` for project-specific UUIDs and URLs.
 
-## Script Location
+## Script
 
-Place `coolify-cli.ts` in `.agents/skills/coolify/scripts/`.
-Copy from another project (e.g. `just-post/.agents/skills/coolify/scripts/coolify-cli.ts`).
+`scripts/coolify-cli.ts` is a minimal, project-agnostic client (Bun or Node 18+). Extend it per project if you need more Coolify endpoints.

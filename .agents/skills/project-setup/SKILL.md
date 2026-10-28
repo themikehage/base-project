@@ -38,7 +38,8 @@ Before touching any file, determine the repository state:
    - `./.deploy.md` (local, git-ignored; created from `./.deploy.example.md`)
    - `./.agents/routines/START.md`, `TRIAGE.md`, `EXECUTE.md`
    - `./.agents/rules/backend.rules.md`, `frontend.rules.md`, `design.rules.md`
-3. **Domain Constraints**: In section `## 6. Non-Negotiable Constraints`, append critical project-wide rules (e.g. "Zero `any` in core layer", "All financial values in integer cents", "Files ≤ 300 lines").
+3. **Rules vs. stack**: keep only the rules in `.agents/rules/` that fit the real stack (e.g. delete `frontend.rules.md` for a backend-only repo; adapt or drop React/Zod/`packages/shared` assumptions for Flutter or non-TS projects). Update the list in `AGENTS.md` §5 accordingly.
+4. **Domain Constraints**: In section `## 8. Non-Negotiable Constraints`, append critical project-wide rules (e.g. "Zero `any` in core layer", "All financial values in integer cents", "Files ≤ 300 lines").
 
 ---
 

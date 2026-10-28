@@ -2,83 +2,83 @@
 trigger: always_on
 ---
 
-# Design Rules — Principios de Diseño de Interfaces (Linear & Primer Style)
+# Design Rules — Interface Design Principles (Linear & Primer Style)
 
-Reglas inamovibles para interfaces web profesionales, de alta densidad de datos y usabilidad prémium. Todo componente, pantalla o refactor visual debe cumplirlas.
-
----
-
-## 1. Document Canvas & Cero "Card Inception"
-
-- **Estructura de documento:** La página se diseña como un lienzo continuo. Prohibido anidar tarjetas dentro de tarjetas con sombras pesadas, bordes gruesos o degradados decorativos (*glows*).
-- **Resource Box Pattern:** Tablas, feeds y listas usan un contenedor único con borde sutil de 1px (`border-border`), superficie neutra (`bg-surface`) y filas delimitadas por divisores limpios (`divide-y divide-border`).
-- **Máxima relación señal/ruido:** Cada píxel debe aportar información o estructura. Eliminar adornos sin propósito funcional.
+Immovable rules for professional, data-dense, premium-usability web interfaces. Every component, screen, or visual refactor must follow them.
 
 ---
 
-## 2. Tipografía Dual y Escaneo Numérico
+## 1. Document Canvas & Zero "Card Inception"
 
-- **Texto de UI:** Sans-Serif (ej. Inter, Geist) para títulos, navegación, etiquetas descriptivas y formularios.
-- **Datos y Métricas:** Monospace (ej. JetBrains Mono, Geist Mono) obligatoria para importes, cifras numéricas, timestamps/fechas, hashes, IDs y métricas.
-- **Alineación tabular:** Cifras numéricas en listas y tablas alineadas a la derecha con `tabular-nums` y decimales consistentes para comparación vertical inmediata.
-
----
-
-## 3. Disciplina Cromática Semántica
-
-- **Superficies neutras:** Escalas monocromáticas calibradas (canvas, superficie de contenedor, superficie elevada/hover).
-- **Color reservado exclusivamente para significado:**
-  - **Verde:** Estados positivos, confirmaciones, entradas/ingresos.
-  - **Rojo:** Destructivo, errores críticos, caídas.
-  - **Ámbar/Amarillo:** Advertencias, pendientes, transiciones.
-  - **Azul/Acento:** Focos interactivos, selección activa, links informativos.
-- **Sin gradientes decorativos:** Evitar fondos arcoíris o botones multicolores innecesarios.
+- **Document structure:** Design the page as a continuous canvas. Nesting cards inside cards with heavy shadows, thick borders, or decorative gradients (*glows*) is forbidden.
+- **Resource Box Pattern:** Tables, feeds, and lists use a single container with a subtle 1px border (`border-border`), a neutral surface (`bg-surface`), and rows separated by clean dividers (`divide-y divide-border`).
+- **Maximum signal-to-noise ratio:** Every pixel must carry information or structure. Remove ornaments with no functional purpose.
 
 ---
 
-## 4. Touch-First y Cero Acciones Ocultas (No Hover Traps)
+## 2. Dual Typography & Numeric Scanning
 
-- **Prohibido ocultar controles críticos tras hover:** Acciones de editar, eliminar, copiar o configurar no pueden depender de `group-hover:opacity-100`. En pantallas táctiles no existe el hover.
-- **Visibilidad permanente atenuada:** Controles siempre visibles con contraste sutil (`text-muted hover:text-foreground`) y área táctil mínima de 32x32px (40px+ en pantallas móviles).
-
----
-
-## 5. Adaptabilidad Móvil: Popovers vs Bottom Sheets
-
-- **Desktop (≥ sm/md):** Filtros, dropdowns y selectores se abren como popovers anclados a su disparador.
-- **Mobile (< sm/md):** Todo selector o menú contextual se transforma en un **Bottom Sheet** anclado al fondo con `backdrop-blur`, altura táctil cómoda y botón de cierre accesible.
+- **UI text:** Sans-serif (e.g. Inter, Geist) for headings, navigation, descriptive labels, and forms.
+- **Data and metrics:** Monospace (e.g. JetBrains Mono, Geist Mono) is mandatory for amounts, numeric figures, timestamps/dates, hashes, IDs, and metrics.
+- **Tabular alignment:** Numeric figures in lists and tables are right-aligned with `tabular-nums` and consistent decimals for immediate vertical comparison.
 
 ---
 
-## 6. Diálogos de Confirmación Estandarizados
+## 3. Semantic Color Discipline
 
-- **Cero `window.confirm()` o `window.alert()`:** Prohibido el uso de diálogos nativos bloqueantes del navegador.
-- **Modal de confirmación explícito:** Cualquier acción destructiva o irreversible debe invocar un diálogo modal accesible con explicación clara de consecuencias y botón semántico de peligro.
-
----
-
-## 7. Scroll Nativo y Respeto al Viewport
-
-- **Scroll perteneciente a `window`:** Evitar encerrar el contenido principal en `div` interiores con `overflow-y-auto` a menos que sea un editor/chat con paneles divididos explícitos.
-- **Inercia y atajos:** El scroll de ventana garantiza 60/120 FPS fluidos, soporte nativo de teclas (`Space`, `PageUp/Down`) y comportamiento predecible de barras de herramientas fijas.
+- **Neutral surfaces:** Calibrated monochrome scales (canvas, container surface, elevated/hover surface).
+- **Color is reserved exclusively for meaning:**
+  - **Green:** Positive states, confirmations, inflows/income.
+  - **Red:** Destructive actions, critical errors, drops.
+  - **Amber/Yellow:** Warnings, pending items, transitions.
+  - **Blue/Accent:** Interactive focus, active selection, informational links.
+- **No decorative gradients:** Avoid rainbow backgrounds or needlessly multicolored buttons.
 
 ---
 
-## 8. Densidad de Datos y Tiras Métricas
+## 4. Touch-First & No Hover Traps
 
-- **Metric Strips sobre Widgets gigantes:** Reemplazar tarjetas colosales con números gigantes por franjas métricas horizontales compactas (`Métrica A: 120 · Métrica B: 45 · Total: 165`).
-- **Responsive wrapping:** Usar `flex-wrap` y separadores condicionales (`hidden sm:inline`) para que las tiras no desborden en pantallas pequeñas (< 400px).
-
----
-
-## 9. Accesibilidad por Teclado y Estados de Foco
-
-- **Todo elemento interactivo es focuseable:** Anillos de foco visibles (`focus-visible:ring-2 focus-visible:outline-none`).
-- **Atajos estándar:** `Escape` siempre cierra modales, sheets y popovers. `Enter`/`Space` activan botones. Soporte de `Cmd+K` / `Ctrl+K` si existe buscador o Command Palette.
+- **Never hide critical controls behind hover:** Edit, delete, copy, or configure actions must not depend on `group-hover:opacity-100`. Touch screens have no hover.
+- **Permanently visible, muted:** Controls are always visible with subtle contrast (`text-muted hover:text-foreground`) and a minimum touch area of 32x32px (40px+ on mobile screens).
 
 ---
 
-## 10. Skeletons y Estados Vacíos Claros
+## 5. Mobile Adaptability: Popovers vs Bottom Sheets
 
-- **Skeletons sobre Spinners:** En cargas de listas o paneles densos, usar skeletons estructurados que respeten el layout final, evitando pantallas parpadeantes o spinners genéricos en el centro.
-- **Empty States accionables:** Cuando no hay datos, explicar qué falta y ofrecer el botón de acción principal para crearlo (no dejar un contenedor en blanco).
+- **Desktop (≥ sm/md):** Filters, dropdowns, and selectors open as popovers anchored to their trigger.
+- **Mobile (< sm/md):** Every selector or context menu becomes a **Bottom Sheet** anchored to the bottom with `backdrop-blur`, comfortable touch height, and an accessible close button.
+
+---
+
+## 6. Standardized Confirmation Dialogs
+
+- **No `window.confirm()` or `window.alert()`:** Blocking native browser dialogs are forbidden.
+- **Explicit confirmation modal:** Any destructive or irreversible action must open an accessible modal dialog that explains the consequences, with a semantic danger button.
+
+---
+
+## 7. Native Scroll & Viewport Respect
+
+- **Scroll belongs to `window`:** Avoid trapping the main content in inner `div`s with `overflow-y-auto`, unless it is an editor/chat with explicit split panes.
+- **Inertia and shortcuts:** Window scroll guarantees smooth 60/120 FPS, native key support (`Space`, `PageUp/Down`), and predictable behavior of fixed toolbars.
+
+---
+
+## 8. Data Density & Metric Strips
+
+- **Metric Strips over giant widgets:** Replace huge cards with giant numbers by compact horizontal metric strips (`Metric A: 120 · Metric B: 45 · Total: 165`).
+- **Responsive wrapping:** Use `flex-wrap` and conditional separators (`hidden sm:inline`) so strips do not overflow on small screens (< 400px).
+
+---
+
+## 9. Keyboard Accessibility & Focus States
+
+- **Every interactive element is focusable:** Visible focus rings (`focus-visible:ring-2 focus-visible:outline-none`).
+- **Standard shortcuts:** `Escape` always closes modals, sheets, and popovers. `Enter`/`Space` activate buttons. Support `Cmd+K` / `Ctrl+K` if a search or command palette exists.
+
+---
+
+## 10. Skeletons & Clear Empty States
+
+- **Skeletons over spinners:** When loading lists or dense panels, use structured skeletons that respect the final layout, avoiding flickering screens or generic centered spinners.
+- **Actionable empty states:** When there is no data, explain what is missing and offer the primary action button to create it (never leave a blank container).

@@ -8,7 +8,6 @@ Keep it lean: every entry is **one line + a link to its plan** (archived in `pla
 
 ## Backlog
 
-- [ ] [H5 — Limpieza](./plans/H5-cleanup.md)
 
 ---
 
@@ -24,3 +23,4 @@ Keep it lean: every entry is **one line + a link to its plan** (archived in `pla
 - [x] [H2 — Ciclo de vida del plan](./plans/completed/H2-plan-lifecycle.md)
 - [x] [H3 — Vía rápida y gate único](./plans/completed/H3-fast-path-and-gate.md)
 - [x] [H4 — Contexto ligero](./plans/completed/H4-lean-context.md)
+- [x] [H5 — Limpieza](./plans/completed/H5-cleanup.md)

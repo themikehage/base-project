@@ -23,7 +23,11 @@ Plantilla base y protocolo sistemático para regir el comportamiento de agentes 
 │   │   └── design.rules.md            # Document canvas, tipografía dual, touch-first
 │   └── skills/
 │       ├── coolify/
-│       │   └── SKILL.md               # Skill de despliegue y health check
+│       │   ├── SKILL.md               # Skill de despliegue y health check
+│       │   └── scripts/coolify-cli.ts # Cliente mínimo: deploy, logs, health
+│       ├── frontend-design/
+│       │   ├── SKILL.md               # Dirección estética para UI nueva
+│       │   └── LICENSE.txt
 │       └── project-setup/
 │           └── SKILL.md               # Guía para poblar protocol files en greenfield/brownfield
 ├── .agents/templates/

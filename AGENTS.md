@@ -71,7 +71,22 @@ The rules files take precedence over any default agent behavior.
 
 ---
 
-## 6. Non-Negotiable Constraints
+## 6. Skills
+
+Skills live in `.agents/skills/<name>/SKILL.md`. Read one before doing the work it covers:
+- **project-setup** — bootstrap or retrofit the protocol files (`about.md`, `steps.md`, `.deploy.md`, `plans/`) in a new or existing repo.
+- **coolify** — deploy, health-check and read logs of a Coolify application.
+- **frontend-design** — aesthetic direction when building or reshaping UI.
+
+---
+
+## 7. Language
+
+Protocol, rules, routines and plans are written in English. `README.md` and conversation with the user are in Spanish.
+
+---
+
+## 8. Non-Negotiable Constraints
 
 - **No code without a plan** outside the Trivial lane (see Work Lanes).
 - **No direct singletons** — use dependency injection.
