@@ -16,7 +16,8 @@ Plantilla base y protocolo sistemático para regir el comportamiento de agentes 
 │   ├── routines/
 │   │   ├── START.md                   # /START: Orientación y comprobación de scaffold
 │   │   ├── TRIAGE.md                  # /TRIAGE: Análisis y creación obligatoria de planes
-│   │   └── EXECUTE.md                 # /EXECUTE: Implementación, validación y commit
+│   │   ├── EXECUTE.md                 # /EXECUTE: Implementación, evidencia, validación y commit
+│   │   └── SHIP.md                    # /SHIP: PR, deploy por reversibilidad, smoke y rollback
 │   ├── rules/
 │   │   ├── backend.rules.md           # Puertos, DI, Zod, errores tipados, files ≤ 300
 │   │   ├── frontend.rules.md          # 1 hook por página, service modules, no direct fetch
@@ -41,3 +42,4 @@ Plantilla base y protocolo sistemático para regir el comportamiento de agentes 
 1. **`/START`**: Al iniciar, lee `about.md`, `steps.md` e `inbox.md` para entender el contexto sin tocar código (`.deploy.md` solo al desplegar).
 2. **`/TRIAGE`**: Ante cualquier feature o bug, detiene la ejecución, investiga y genera un plan verificable (`plans/H<N>-<slug>.md`, `Status: draft`) con criterios de aceptación. Espera la aprobación del usuario.
 3. **`/EXECUTE`**: Una vez aprobado el plan (`Status: approved`), ejecuta el hito, corre typecheck y lint, archiva el plan en `plans/completed/` y genera un commit convencional sin atribución de IA.
+4. **`/SHIP`**: Con el trabajo terminado, abre el PR y despliega según reversibilidad (staging autónomo con evidencia; producción y migraciones solo con aprobación humana), comprueba el cambio con un smoke y revierte si falla.

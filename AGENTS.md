@@ -41,6 +41,7 @@ Routines are strict operational workflows. When a trigger condition is met, **yo
 | **`/START`** | [.agents/routines/START.md](./.agents/routines/START.md) | First time opening the project, starting a new work session, or after a long pause. |
 | **`/TRIAGE`** | [.agents/routines/TRIAGE.md](./.agents/routines/TRIAGE.md) | Any feature request, bug report, refactor, or optimization that is not **Trivial** (see Work Lanes). Never write code directly. |
 | **`/EXECUTE`** | [.agents/routines/EXECUTE.md](./.agents/routines/EXECUTE.md) | **ONLY** after the user explicitly reviews and approves an existing plan in `plans/`. |
+| **`/SHIP`** | [.agents/routines/SHIP.md](./.agents/routines/SHIP.md) | Publishing finished work: open a PR, deploy, or release. Never deploy outside this routine. |
 
 ### Work Lanes
 

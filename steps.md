@@ -26,3 +26,4 @@ Keep it lean: every entry is **one line + a link to its plan** (archived in `pla
 - [x] H1 — Triage: reproduce first, explicit exits → [plan](plans/completed/H1-triage-exits.md)
 - [x] H2 — Tests: evidence per criterion → [plan](plans/completed/H2-test-evidence.md)
 - [x] H3 — Deviation rule and escalation list → [plan](plans/completed/H3-deviation-escalation.md)
+- [x] H4 — Integration: /SHIP routine → [plan](plans/completed/H4-ship-routine.md)

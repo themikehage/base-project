@@ -5,6 +5,10 @@ description: Deploy and manage applications on Coolify v4 via CLI. Handles deplo
 
 # Coolify Skill
 
+## When to use
+
+Only from the `/SHIP` routine (`.agents/routines/SHIP.md`): staging deploys may be autonomous with complete evidence; production deploys need explicit human approval each time. If health or smoke fails, roll back (see Rollback in `.deploy.md`) before anything else.
+
 ## Usage
 
 ```bash
