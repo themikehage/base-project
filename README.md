@@ -17,6 +17,7 @@ Plantilla base y protocolo sistemático para regir el comportamiento de agentes 
 │   │   ├── START.md                   # /START: Orientación y comprobación de scaffold
 │   │   ├── TRIAGE.md                  # /TRIAGE: Análisis y creación obligatoria de planes
 │   │   ├── EXECUTE.md                 # /EXECUTE: Implementación, evidencia, validación y commit
+│   │   ├── TEST.md                    # /TEST: pruebas opcionales con Playwright (explorar o regresión)
 │   │   └── SHIP.md                    # /SHIP: PR, deploy por reversibilidad, smoke y rollback
 │   ├── rules/
 │   │   ├── backend.rules.md           # Puertos, DI, Zod, errores tipados, files ≤ 300
@@ -44,4 +45,5 @@ Plantilla base y protocolo sistemático para regir el comportamiento de agentes 
 1. **`/START`**: Al iniciar, lee `about.md`, `steps.md` e `inbox.md` para entender el contexto sin tocar código (`.deploy.md` solo al desplegar).
 2. **`/TRIAGE`**: Ante cualquier feature o bug, detiene la ejecución, reproduce el bug o aclara el resultado esperado (puede concluir *sin código*, *duplicado*, *falta info* o *descartar*) y, si procede, genera un plan verificable (`plans/H<N>-<slug>.md`, `Status: draft`) con criterios de aceptación. Espera la aprobación del usuario.
 3. **`/EXECUTE`**: Una vez aprobado el plan (`Status: approved`), ejecuta el hito, pasa `verify`, comprueba cada criterio con una ejecución real y registra la evidencia en el plan, revisa su propio diff, anota la retro (lecciones → `about.md`/reglas), archiva el plan en `plans/completed/` y genera un commit convencional sin atribución de IA. Si el trabajo se desvía del plan, se detiene y vuelve a `/TRIAGE` (ver *Deviation & Escalation* en `AGENTS.md`).
-4. **`/SHIP`**: Con el trabajo terminado, abre el PR y despliega según reversibilidad (staging autónomo con evidencia; producción y migraciones solo con aprobación humana), comprueba el cambio con un smoke y revierte si falla.
+4. **`/TEST`** (opcional, solo bajo petición): levanta la app y la prueba con Playwright, en modo exploración (informe de hallazgos) o regresión (specs en `e2e/`). No sustituye a `verify` ni es automático.
+5. **`/SHIP`**: Con el trabajo terminado, abre el PR y despliega según reversibilidad (staging autónomo con evidencia; producción y migraciones solo con aprobación humana), comprueba el cambio con un smoke y revierte si falla.

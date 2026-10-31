@@ -58,6 +58,7 @@
 
 ### Behavior check (optional)
 - `<e2e/browser command>` — e2e or `agent-browser` run used as plan evidence for UI/behavior criteria.
+- `/TEST` (Playwright) — optional exploratory/regression testing, see `.agents/routines/TEST.md`. Record the e2e command here once configured.
 
 ### Server
 - `<pm> run dev` — Local dev server
