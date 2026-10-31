@@ -52,6 +52,8 @@ Routines are strict operational workflows. When a trigger condition is met, **yo
 
 If unsure, it is not Trivial.
 
+Not every request becomes a plan: `/TRIAGE` may also conclude **no code needed**, **duplicate**, **needs info** or **discard**, and must reproduce bugs before planning a fix.
+
 ### Strict Operational Rules:
 1. **Never jump straight into coding:** Outside the Trivial lane, when the user asks for a feature or reports a bug, you are strictly forbidden from writing code immediately. You MUST trigger `/TRIAGE`, read [.agents/routines/TRIAGE.md](./.agents/routines/TRIAGE.md), and deliver an approved plan first.
 2. **Read the routine file first:** Before starting any routine, read its dedicated file in [.agents/routines/](./.agents/routines/) to ensure zero deviation from the current protocol.
