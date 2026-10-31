@@ -18,8 +18,8 @@
 
 - [ ] **HN-A1** — {{CRITERION_1}}
 - [ ] **HN-A2** — {{CRITERION_2}}
-- [ ] **HN-A3** — TypeScript check passes with exit code 0.
-- [ ] **HN-A4** — No console errors in the browser / runtime.
+- [ ] **HN-A3** — `verify` passes with exit code 0.
+- [ ] **HN-A4** — No console errors in the browser / runtime *(state how it is checked, e.g. `agent-browser` console log or server log grep)*.
 
 ---
 
@@ -54,13 +54,19 @@
 ## Verification
 
 ```bash
-# TypeScript check
-npx tsc --noEmit
+<pm> run verify
 # -> exit code 0
-
-# Build check
-npm run build
-# -> no errors
 ```
 
-Manual verification: {{MANUAL_VERIFICATION_STEPS}}.
+Behavior check: {{HOW_EACH_CRITERION_IS_EXERCISED — command, HTTP call, or browser run}}.
+
+---
+
+## Evidence
+
+*(Filled during `/EXECUTE`. One line per criterion: command + result, screenshot path, or log excerpt. `Status: done` is not allowed while any line is empty.)*
+
+- HN-A1 — {{EVIDENCE}}
+- HN-A2 — {{EVIDENCE}}
+- HN-A3 — {{EVIDENCE}}
+- HN-A4 — {{EVIDENCE}}

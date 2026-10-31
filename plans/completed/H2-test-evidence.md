@@ -1,6 +1,6 @@
 # H2 — Tests: evidence per criterion
 
-**Status**: approved
+**Status**: done
 **Objective**: "Approved" means every acceptance criterion has recorded evidence, not just a passing build.
 
 **Active rules**: none (protocol files only).
@@ -14,11 +14,11 @@
 
 ## Target State (To-Be) — Acceptance Criteria
 
-- [ ] **H2-A1** — `plan.md` template has an **Evidence** section: one line per criterion (command output, screenshot path, log excerpt).
-- [ ] **H2-A2** — Template Verification uses `<pm> run verify`; no standalone tsc/build block.
-- [ ] **H2-A3** — `EXECUTE.md` forbids setting `done` while any criterion lacks evidence, and tells the agent to drive behavioral criteria through a real run (browser/CLI/HTTP), citing `agent-browser` when UI is involved.
-- [ ] **H2-A4** — `EXECUTE.md` requires a self-review pass of the diff against the plan (scope + criteria) before closing.
-- [ ] **H2-A5** — Criteria that cannot be checked by command or observation (e.g. "no console errors") must state how they are checked.
+- [x] **H2-A1** — `plan.md` template has an **Evidence** section: one line per criterion (command output, screenshot path, log excerpt).
+- [x] **H2-A2** — Template Verification uses `<pm> run verify`; no standalone tsc/build block.
+- [x] **H2-A3** — `EXECUTE.md` forbids setting `done` while any criterion lacks evidence, and tells the agent to drive behavioral criteria through a real run (browser/CLI/HTTP), citing `agent-browser` when UI is involved.
+- [x] **H2-A4** — `EXECUTE.md` requires a self-review pass of the diff against the plan (scope + criteria) before closing.
+- [x] **H2-A5** — Criteria that cannot be checked by command or observation (e.g. "no console errors") must state how they are checked.
 
 ## Artifacts
 

@@ -24,3 +24,4 @@ Keep it lean: every entry is **one line + a link to its plan** (archived in `pla
 *(one line + link to `plans/completed/H<N>-<slug>.md` when acceptance criteria pass)*
 
 - [x] H1 — Triage: reproduce first, explicit exits → [plan](plans/completed/H1-triage-exits.md)
+- [x] H2 — Tests: evidence per criterion → [plan](plans/completed/H2-test-evidence.md)

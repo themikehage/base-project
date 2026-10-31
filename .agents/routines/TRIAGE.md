@@ -43,5 +43,6 @@ Run when the user brings a feature request, improvement, or bug report.
 - Which rules apply (`frontend.rules.md`, `backend.rules.md`, `design.rules.md`).
 - Checkboxed acceptance criteria that are **verifiable by command or observation**. For a bug, the first criterion is the reproduction from step 3 no longer failing.
 - A **Non-Negotiable Constraints** section (what MUST NOT be broken or touched).
-- A **Verification** section with runnable commands, always including `verify`.
+- A **Verification** section with runnable commands, always including `verify`, and how each behavioral criterion will be exercised.
+- An **Evidence** section (empty until `/EXECUTE`).
 - The canonical structure from `.agents/templates/plan.md`.
