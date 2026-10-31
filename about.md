@@ -51,6 +51,11 @@
 ### Quality gate (mandatory)
 - `<pm> run verify` — the single gate every change must pass: typecheck + lint + `check:size` (no file > 300 lines) + tests + build. Define it in `package.json` and keep this line accurate.
 
+### CI (mandatory)
+- Workflow: `.github/workflows/ci.yml` — runs on every push and PR, from a clean checkout: install → `<pm> run verify`. It must call `verify` and nothing that diverges from it.
+- `verify` must include a real linter/formatter (e.g. Biome or ESLint + Prettier), configured and versioned in the repo.
+- Install must work from a clean clone with a single command (workspaces unified); `test` must never traverse packages whose dependencies are not installed.
+
 ### Behavior check (optional)
 - `<e2e/browser command>` — e2e or `agent-browser` run used as plan evidence for UI/behavior criteria.
 

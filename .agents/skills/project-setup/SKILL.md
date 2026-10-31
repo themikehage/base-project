@@ -101,6 +101,10 @@ Make sure `package.json` defines a single `verify` script chaining typecheck, li
 ```bash
 ! git ls-files '*.ts' '*.tsx' | xargs wc -l | awk '$1>300 && $2!="total"' | grep .
 ```
+Then ensure CI exists (mandatory, see `AGENTS.md` §8). Create `.github/workflows/ci.yml` if missing: on `push` and `pull_request`, checkout → setup runtime → install (frozen lockfile) → `<pm> run verify`. Document it under `CI` in `about.md`. `verify` must include a real linter/formatter; if none is configured, add one.
+
+**Brownfield audit of the gate:** from a clean clone, run install and `verify`; record whether CI exists, whether install works in one command (workspaces unified) and whether `test` passes. Every gap (no CI, no lint tool, broken or flaky tests, unusable install) becomes an explicit milestone, ahead of feature work.
+
 Extract real npm/pnpm/bun scripts from `package.json`:
 - Dev commands: separate backend dev vs frontend dev vs concurrent hot-reload (`pnpm dev`).
 - Quality gates: `typecheck` (`tsc --noEmit`), `lint`, `test`.
@@ -114,11 +118,11 @@ This document reflects current milestone execution status.
 
 #### Greenfield Project:
 Define the initial sequential milestones:
-- `[ ] **H1 — Foundation**: Scaffold, environment validation, database connection, health check.`
+- `[ ] **H1 — Foundation**: Scaffold, environment validation, database connection, health check, lint tool, `verify` script and CI workflow.`
 - `[ ] **H2 — Core Domain**: Business logic schemas, validation, ports.`
 - `[ ] **H3 — API Routes**: HTTP endpoints and integration tests.`
 - `[ ] **H4 — Frontend UI / Integration**: User interface and consumption of API.`
-- `[ ] **H5 — Production Deployment**: Dockerfile, CI/CD, and hosting config.`
+- `[ ] **H5 — Production Deployment**: Dockerfile, CD, and hosting config (CI already exists since H1).`
 
 #### Brownfield Project (Existing Codebase):
 1. **Audit Git & Code**: Review git log and existing routes/components.

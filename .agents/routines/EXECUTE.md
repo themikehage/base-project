@@ -30,3 +30,4 @@ Run when a plan has been reviewed and approved by the user.
    git commit -m "feat|fix|refactor|chore(scope): description"
    ```
 10. Confirm `git status` is clean.
+11. If the commit was pushed, check that CI passes (`gh run watch` / `gh pr checks`) before reporting the milestone as closed. A red CI reopens it.

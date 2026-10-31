@@ -39,6 +39,8 @@ Plantilla base y protocolo sistemático para regir el comportamiento de agentes 
 
 ## Flujo de Trabajo para el Agente
 
+> **CI obligatorio**: todo proyecto debe tener un workflow (`.github/workflows/ci.yml`) que ejecute `verify` en cada push y PR, con un linter real. Sin CI el proyecto no se considera configurado.
+
 1. **`/START`**: Al iniciar, lee `about.md`, `steps.md` e `inbox.md` para entender el contexto sin tocar código (`.deploy.md` solo al desplegar).
 2. **`/TRIAGE`**: Ante cualquier feature o bug, detiene la ejecución, reproduce el bug o aclara el resultado esperado (puede concluir *sin código*, *duplicado*, *falta info* o *descartar*) y, si procede, genera un plan verificable (`plans/H<N>-<slug>.md`, `Status: draft`) con criterios de aceptación. Espera la aprobación del usuario.
 3. **`/EXECUTE`**: Una vez aprobado el plan (`Status: approved`), ejecuta el hito, pasa `verify`, comprueba cada criterio con una ejecución real y registra la evidencia en el plan, revisa su propio diff, anota la retro (lecciones → `about.md`/reglas), archiva el plan en `plans/completed/` y genera un commit convencional sin atribución de IA. Si el trabajo se desvía del plan, se detiene y vuelve a `/TRIAGE` (ver *Deviation & Escalation* en `AGENTS.md`).

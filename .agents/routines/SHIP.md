@@ -10,7 +10,7 @@ Run after `/EXECUTE` when the user asks to publish, open a PR, or deploy.
 ## Preconditions (all must hold, else stop)
 
 1. The plan is `Status: done` and every criterion has evidence.
-2. `<pm> run verify` passes on the current tree.
+2. `<pm> run verify` passes on the current tree **and CI is green on the commit being shipped** (`gh run list` / `gh pr checks`). A red or missing CI blocks the deploy.
 3. `git status` is clean and the commit is conventional.
 
 ## Autonomy by Reversibility

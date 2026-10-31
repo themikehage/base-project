@@ -59,7 +59,7 @@ Not every request becomes a plan: `/TRIAGE` may also conclude **no code needed**
 1. **Never jump straight into coding:** Outside the Trivial lane, when the user asks for a feature or reports a bug, you are strictly forbidden from writing code immediately. You MUST trigger `/TRIAGE`, read [.agents/routines/TRIAGE.md](./.agents/routines/TRIAGE.md), and deliver an approved plan first.
 2. **Read the routine file first:** Before starting any routine, read its dedicated file in [.agents/routines/](./.agents/routines/) to ensure zero deviation from the current protocol.
 3. **One milestone at a time:** `/EXECUTE` only processes the single active approved milestone. Never batch multiple milestones together.
-4. **Mandatory validation gate:** every lane ends with the project's single `verify` command (defined in `about.md`: typecheck, lint, file-size check, tests, build) passing, then a clean conventional commit.
+4. **Mandatory validation gate:** every lane ends with the project's single `verify` command (defined in `about.md`: typecheck, lint, file-size check, tests, build) passing **locally and in CI**, then a clean conventional commit.
 
 ### Deviation & Escalation
 
@@ -108,4 +108,6 @@ Protocol, rules, routines and plans are written in English. `README.md` and conv
 - **No direct singletons** — use dependency injection.
 - **No `any`** in new code — strict TypeScript always.
 - **Files ≤ 300 lines** — extract when growing.
+- **CI is mandatory** — a workflow runs `verify` on every push and PR (`about.md` → CI). A project without it is not considered set up; fixing that is the first milestone.
+- **Real lint** — `verify` must run an actual linter/formatter tool, not just the word "lint" in a doc.
 - **Conventional commits only** — no AI attribution.
