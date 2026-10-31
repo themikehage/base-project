@@ -1,6 +1,6 @@
 # H5 — Close-out retro and consistency fixes
 
-**Status**: approved
+**Status**: done
 **Objective**: Lessons from each plan feed back into the protocol; stale docs are aligned.
 
 **Active rules**: none (protocol files only).
@@ -13,11 +13,11 @@
 
 ## Target State (To-Be) — Acceptance Criteria
 
-- [ ] **H5-A1** — `EXECUTE.md` closing step: "Retro" — if the work surfaced a surprise, a user correction, or a failed attempt, add a one-line gotcha to `about.md` (Key Constraints & Gotchas) or a rule to `.agents/rules/`; otherwise state "no lessons".
-- [ ] **H5-A2** — Plan template ends with a **Retro** line to be filled at close.
-- [ ] **H5-A3** — README flow text reflects `verify`, evidence, deviation, SHIP and retro.
-- [ ] **H5-A4** — `about.md` template Project Commands notes optional browser/e2e check command.
-- [ ] **H5-A5** — `project-setup` SKILL.md mentions the new files (SHIP, evidence, retro) where it lists protocol files.
+- [x] **H5-A1** — `EXECUTE.md` closing step: "Retro" — if the work surfaced a surprise, a user correction, or a failed attempt, add a one-line gotcha to `about.md` (Key Constraints & Gotchas) or a rule to `.agents/rules/`; otherwise state "no lessons".
+- [x] **H5-A2** — Plan template ends with a **Retro** line to be filled at close.
+- [x] **H5-A3** — README flow text reflects `verify`, evidence, deviation, SHIP and retro.
+- [x] **H5-A4** — `about.md` template Project Commands notes optional browser/e2e check command.
+- [x] **H5-A5** — `project-setup` SKILL.md mentions the new files (SHIP, evidence, retro) where it lists protocol files.
 
 ## Artifacts
 

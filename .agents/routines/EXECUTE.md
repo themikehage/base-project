@@ -18,14 +18,15 @@ Run when a plan has been reviewed and approved by the user.
 4. Fix any errors before closing the milestone.
 5. **Exercise the behavior, not just the build.** For each acceptance criterion, run the real thing (CLI, HTTP request, or browser — use `agent-browser` for UI) and record the result in the plan's **Evidence** section. A criterion with no evidence is not met.
 6. **Self-review the diff** against the plan: every changed file is in scope, every criterion has evidence, nothing extra slipped in. Anything out of scope is reverted or triggers the deviation rule.
-7. Close the milestone **before** committing, so the commit is complete:
+7. **Retro.** If the work surfaced a surprise, a user correction or a failed attempt, add a one-line gotcha to `about.md` (Key Constraints & Gotchas) or a rule to `.agents/rules/`, and write it in the plan's Retro line. Otherwise write "no lessons".
+8. Close the milestone **before** committing, so the commit is complete:
    - Mark completed criteria as `[x]` (only those with evidence) and set `Status: done` in the plan.
    - Move the plan to `plans/completed/`.
    - Move the milestone to Completed in `steps.md` (one line + link to the archived plan).
-   - Update `about.md` if architecture, constraints, env vars or commands changed.
-8. Commit with a conventional commit, adding only the files you changed (no `git add .`, no AI attribution):
+   - Update `about.md` if architecture, constraints, env vars, commands or retro gotchas changed.
+9. Commit with a conventional commit, adding only the files you changed (no `git add .`, no AI attribution):
    ```bash
    git add <explicit paths>
    git commit -m "feat|fix|refactor|chore(scope): description"
    ```
-9. Confirm `git status` is clean.
+10. Confirm `git status` is clean.

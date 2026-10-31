@@ -5,7 +5,7 @@ description: Comprehensive guide for AI agents on how to inspect codebases and a
 
 # Project Setup Skill — Protocol & Scaffold Bootstrapping
 
-This skill instructs AI agents on how to initialize, audit, and populate the agent protocol files (`AGENTS.md`, `about.md`, `steps.md`, `.deploy.md`, `.gitignore`, and `plans/`) for any codebase.
+This skill instructs AI agents on how to initialize, audit, and populate the agent protocol files (`AGENTS.md`, `about.md`, `steps.md`, `.deploy.md`, `.gitignore`, and `plans/`) for any codebase. The routines (`START`, `TRIAGE`, `EXECUTE`, `SHIP`), the plan template (with **Evidence** and **Retro**) and the *Deviation & Escalation* rule in `AGENTS.md` are part of the protocol: keep them intact when retrofitting.
 
 ---
 

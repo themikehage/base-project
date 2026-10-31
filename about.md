@@ -51,6 +51,9 @@
 ### Quality gate (mandatory)
 - `<pm> run verify` — the single gate every change must pass: typecheck + lint + `check:size` (no file > 300 lines) + tests + build. Define it in `package.json` and keep this line accurate.
 
+### Behavior check (optional)
+- `<e2e/browser command>` — e2e or `agent-browser` run used as plan evidence for UI/behavior criteria.
+
 ### Server
 - `<pm> run dev` — Local dev server
 

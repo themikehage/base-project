@@ -70,3 +70,9 @@ Behavior check: {{HOW_EACH_CRITERION_IS_EXERCISED — command, HTTP call, or bro
 - HN-A2 — {{EVIDENCE}}
 - HN-A3 — {{EVIDENCE}}
 - HN-A4 — {{EVIDENCE}}
+
+---
+
+## Retro
+
+{{LESSON_OR_"no lessons" — filled at close}}
