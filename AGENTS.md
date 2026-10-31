@@ -60,6 +60,19 @@ Not every request becomes a plan: `/TRIAGE` may also conclude **no code needed**
 3. **One milestone at a time:** `/EXECUTE` only processes the single active approved milestone. Never batch multiple milestones together.
 4. **Mandatory validation gate:** every lane ends with the project's single `verify` command (defined in `about.md`: typecheck, lint, file-size check, tests, build) passing, then a clean conventional commit.
 
+### Deviation & Escalation
+
+**Deviation rule.** During `/EXECUTE`, if you need to touch files outside the plan, a criterion turns out to be unmeetable, or the work outgrows its lane: **stop**, record what you found in the plan, and return to `/TRIAGE`. Do not improvise a larger change.
+
+**Always ask a human before:**
+- deploying to production, or running data migrations;
+- any destructive or irreversible operation (deleting data, force-push, dropping tables);
+- touching secrets, credentials, auth or permission logic;
+- changing scope or acceptance criteria of an approved plan;
+- anything that spends money or messages third parties.
+
+Asking costs minutes; a wrong irreversible action costs far more. When unsure whether something is reversible, treat it as irreversible.
+
 ---
 
 ## 5. Architecture Principles & Code Rules

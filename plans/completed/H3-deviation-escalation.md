@@ -1,6 +1,6 @@
 # H3 — Deviation rule and escalation list
 
-**Status**: approved
+**Status**: done
 **Objective**: The agent knows when to stop and ask, written as explicitly as when to proceed.
 
 **Active rules**: none (protocol files only).
@@ -13,10 +13,10 @@
 
 ## Target State (To-Be) — Acceptance Criteria
 
-- [ ] **H3-A1** — `AGENTS.md` has a "Deviation & Escalation" section with the deviation rule: out-of-plan files, a criterion that cannot be met, or growth beyond the lane → stop, record it, return to `/TRIAGE`.
-- [ ] **H3-A2** — Same section lists mandatory-human actions: production deploy, data migrations, destructive/irreversible operations, secrets/credentials, auth/permission changes, scope or acceptance-criteria changes, spending.
-- [ ] **H3-A3** — States the principle: asking costs minutes, a wrong irreversible action costs far more; when unsure, ask.
-- [ ] **H3-A4** — `EXECUTE.md` step 2 references the deviation rule.
+- [x] **H3-A1** — `AGENTS.md` has a "Deviation & Escalation" section with the deviation rule: out-of-plan files, a criterion that cannot be met, or growth beyond the lane → stop, record it, return to `/TRIAGE`.
+- [x] **H3-A2** — Same section lists mandatory-human actions: production deploy, data migrations, destructive/irreversible operations, secrets/credentials, auth/permission changes, scope or acceptance-criteria changes, spending.
+- [x] **H3-A3** — States the principle: asking costs minutes, a wrong irreversible action costs far more; when unsure, ask.
+- [x] **H3-A4** — `EXECUTE.md` step 2 references the deviation rule.
 
 ## Artifacts
 

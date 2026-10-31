@@ -10,7 +10,7 @@ Run when a plan has been reviewed and approved by the user.
 ## Protocol
 
 1. Read the target plan file completely. If its `Status` is not `approved`, **stop** and ask the user.
-2. Implement each artifact following the acceptance criteria. One milestone only.
+2. Implement each artifact following the acceptance criteria. One milestone only. If you hit a deviation (out-of-plan files, unmeetable criterion, outgrown lane), follow the **Deviation & Escalation** rule in `AGENTS.md`: stop and return to `/TRIAGE`.
 3. Validate with the single project gate defined in `about.md` (`Quality gate`):
    ```bash
    <pm> run verify     # typecheck + lint + check:size + tests + build
