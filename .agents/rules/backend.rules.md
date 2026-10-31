@@ -46,3 +46,14 @@ Code explains itself. If it needs a comment, refactor it. Only exception: TODO d
 ## 9. Files ≤ 300 Lines
 
 No file exceeds 300 lines. If it grows, extract responsibilities into specialized submodules. God objects don't exist.
+
+## 10. Secure by Default
+
+- Endpoints that expose or mutate personal data, or that configure secrets/API keys, require authentication. No anonymous access by default.
+- CORS `origin: "*"` is forbidden. Allow an explicit origin list from env.
+- Adding auth or changing permission logic requires human approval (see `AGENTS.md` → Deviation & Escalation).
+
+## 11. Tests Must Be Self-Contained
+
+- One install from a clean clone makes every package's tests runnable (unified workspace). `test` must never traverse packages whose dependencies are not installed.
+- A new route or domain capability ships with tests. A failing test blocks `verify`; never skip or delete it to get green.
